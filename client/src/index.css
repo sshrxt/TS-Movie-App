@@ -5,14 +5,32 @@
   padding: 0px;
 }
 
+:root {
+  --gradient: linear-gradient(
+      45deg,
+      #846ec2,
+      #862669,
+      #912840,
+      #0d082e,
+      #0c0116
+  );
+}
+
 body {
-  background:  linear-gradient(45deg, #0d082e, #0c0116);
-  background-color: #0c0116;
+  background: #fff;
+  background-image: var(--gradient);
+  background-size: 800%;
+  animation: bg-animation 50s infinite alternate;
   color: rgb(174, 129, 233);
   font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
   font-family: "LXGW WenKai Mono TC", monospace;
+}
+
+@keyframes bg-animation {
+  0% {background-position: left;}
+  100% {background-position: right;}
 }
 
 
@@ -54,7 +72,7 @@ body {
 
 .logo {
   margin-left: 20px;
-  background: linear-gradient(95deg, #a270db, #796cf0);
+  background: linear-gradient(95deg, #e38df0, #8f87e6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -125,7 +143,7 @@ body {
 .movie-container {
   width: 90vw;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 1rem;
   padding: 20px;
   margin: auto;

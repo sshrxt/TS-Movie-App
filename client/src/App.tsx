@@ -26,8 +26,8 @@ function App() {
   return (
     <>
        <Navbar onButtonClick={togglePopularMovies} onSearch={handleSearch} /> 
-       {showPopularMovies && whichMovieOption === "trending" && <PopularMovies movies={movies} setMovies={setMovies} />}
-       <AdvancedMovies movies={movies} setMovies={setMovies} query={query}/>
+       {showPopularMovies && <PopularMovies movies={movies} setMovies={setMovies} />}
+       {whichMovieOption === "advanced" && <AdvancedMovies movies={movies} setMovies={setMovies} query={query}/>}
        
     </>
   )
