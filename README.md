@@ -28,12 +28,14 @@ This project leverages the power of React for a responsive UI, Chakra UI for sty
 
    ```bash
    cd server
+   npm i
    npm run dev
 2. **Start the Client**
 
    ```bash
    cd ..
    cd client
+   npm i
    npm run dev
    
 3. **Open Respective Local Host**
