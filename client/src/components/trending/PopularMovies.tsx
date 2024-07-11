@@ -1,4 +1,5 @@
 import React, {useEffect } from "react";
+import MovieCard from "../card/MovieCard";
 
 export type MovieType = {
   name: string,
@@ -39,11 +40,10 @@ export const PopularMovies = ({ movies, setMovies }: PopularMoviesProps) => {
   }, [setMovies]);
 
   return (
-    <div>
-      {movies.map((movie) => {
-        console.log(`https://image.tmdb.org/t/p/w500$${movie.imageUrl}`)
-        return <img key = {movie.name} src= {`https://image.tmdb.org/t/p/w500${movie.imageUrl}`} alt={movie.name} />
-      })}
+    <div className="movie-container">
+      {movies.map((movie, index) => (
+        <MovieCard key = {index} movie={movie}/>
+      ))}
     </div>
   );
 };

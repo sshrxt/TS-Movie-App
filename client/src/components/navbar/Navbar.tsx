@@ -14,12 +14,12 @@ const Navbar: React.FC<NavbarProps> = ({ onButtonClick }) => {
       <div className="logo">
         <h1>Movie</h1>
       </div>
-      <div className="search-container">
-        <input className='search' type="text" />
-        <button className="submit-button" type="submit">
+      <form className="search-container">
+        <input className='search' type="text" placeholder="Search for a Movie..."/>
+        <button className="submit-button" type="submit" id="submit-button">
           <img src={Search} alt="" />
         </button>
-      </div>
+      </form>
       <button onClick={onButtonClick} className="trending">Trending Now</button>
     </div>
   )

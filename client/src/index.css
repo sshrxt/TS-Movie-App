@@ -1,28 +1,33 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
   margin: 0px;
   padding: 0px;
 }
 
 body {
-  background-color: rgb(19, 18, 18);
+  background:  linear-gradient(45deg, #0d082e, #0c0116);
+  background-color: #0c0116;
   color: rgb(174, 129, 233);
   font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
+  font-family: "LXGW WenKai Mono TC", monospace;
 }
+
+
+/*---------------------scrollbar------------------------*/
 
 ::-webkit-scrollbar {
   width: 12px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -33,6 +38,9 @@ body {
   background: rgb(174, 129, 233);
 }
 
+
+/*---------------------navbar------------------------*/
+
 .navbar {
   width: 95%;
   margin: auto;
@@ -41,34 +49,67 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 25px;
+
 }
 
 .logo {
   margin-left: 20px;
+  background: linear-gradient(95deg, #a270db, #796cf0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-size: 2.4rem;
 }
 
 .trending {
   margin-right: 60px;
-  width: 150px;
+  width: 200px;
   background: none;
   border: none;
-  color: white;
-  font-size: 1.3rem;
+  color: rgb(174, 129, 233);
+  font-size: 1.8rem;
+  font-family: "LXGW WenKai Mono TC", monospace;
+  font-weight: bold;
+  transition: all .3s;
+  background: linear-gradient(95deg, #a270db, #796cf0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
+
+.trending:hover {
+  color: rgb(197, 120, 233);
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #8f64b8, #e71c8c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
 
 .search {
   width: 50%;
-  height: 50px;
+  height: 30px;
   border-radius: 20px;
-  font-size: 2rem;
-  outline: none;
+  font-size: 1.7rem;
+  outline: white;
   min-width: 350px;
+  background-color:#fafaf0;
+  font-weight: bold;
+  padding: 10px;
+  font-family: "LXGW WenKai Mono TC", monospace;
+}
+
+.search:focus {
+  border: 2px solid rgb(206, 155, 206);
 }
 
 .submit-button {
   background: none;
   border: none;
-
 }
 
 .search-container {
@@ -76,4 +117,65 @@ body {
   gap: 10px;
   width: 80vw;
   justify-content: center;
+}
+
+
+/*----------------------------movie container ---------------------*/
+
+.movie-container {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1rem;
+  padding: 20px;
+  margin: auto;
+}
+
+.card > img{
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.card {
+  border-radius: 20px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay h3 {
+  margin-bottom: 8px;
+  font-size: 3rem;
+}
+
+.overlay p {
+  font-size: 2rem;
+  text-align: center;
+  padding: 0 16px;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+  border: 2px solid white;
 }
