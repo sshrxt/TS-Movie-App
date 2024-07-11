@@ -22,7 +22,24 @@ This is a dynamic and interactive movie website where users can search for movie
 This project leverages the power of React for a responsive UI, Chakra UI for stylish and accessible design components, and ExpressJS with NodeJS for a robust backend to handle API requests efficiently.
 
 
+## Getting Started
 
-![moviehomepage](https://github.com/sshrxt/TS-Movie-App/assets/154020906/a894a5e2-30f7-4366-b0da-28723dcb821f)
-![moviesearch](https://github.com/sshrxt/TS-Movie-App/assets/154020906/e8cd2575-ae88-47d0-84a4-5631bb0be0cf)
-![moviesummary](https://github.com/sshrxt/TS-Movie-App/assets/154020906/a2eca8fa-c5cf-4a45-87e4-f6d124dd0af0)
+1. **Start the Server:**
+
+   ```bash
+   cd server
+   npm run dev
+2. **Start the Client**
+
+   ```bash
+   cd ..
+   cd client
+   npm run dev
+   
+3. **Open Respective Local Host**
+
+## Website Preview
+![moviesnap](https://github.com/sshrxt/TS-Movie-App/assets/154020906/4dfb5aa7-7c54-4e3c-a2a2-294527cb0682)
+![image](https://github.com/sshrxt/TS-Movie-App/assets/154020906/713fd970-a168-4949-a942-851380107bed)
+![image](https://github.com/sshrxt/TS-Movie-App/assets/154020906/23124c44-888e-453b-9042-36a22813e29c)
+
