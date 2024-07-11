@@ -1,10 +1,12 @@
 import express from 'express'
-import path from 'path'
 import popularMoviesRouter from './routes/trending.js'
 import advancedMovieRouter from './routes/advanced.js'
+import cors from 'cors'
 
 const app = express();
 const PORT = process.env.PORT || 8000;
+
+app.use(cors());
 
 app.use(express.json());
 
