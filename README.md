@@ -39,7 +39,12 @@ This project leverages the power of React for a responsive UI, Chakra UI for sty
 3. **Open Respective Local Host**
 
 ## Website Preview
+**Shows Movies that are Trending Today**
 ![moviesnap](https://github.com/sshrxt/TS-Movie-App/assets/154020906/4dfb5aa7-7c54-4e3c-a2a2-294527cb0682)
+
+**Shows movie results for the movie "dune"**
 ![image](https://github.com/sshrxt/TS-Movie-App/assets/154020906/713fd970-a168-4949-a942-851380107bed)
+
+**Shows movie title and summary for the movie search "spiderman"**
 ![image](https://github.com/sshrxt/TS-Movie-App/assets/154020906/23124c44-888e-453b-9042-36a22813e29c)
 
