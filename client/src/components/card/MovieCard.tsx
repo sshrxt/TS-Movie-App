@@ -1,5 +1,6 @@
 import { MovieType } from "../trending/PopularMovies"
 import { useState } from "react"
+import DefaultImg from '../../assets/img-nofound.jpg'
 
 type MovieCardProps = {
     movie: MovieType,
@@ -26,10 +27,13 @@ const MovieCard = ({movie}: MovieCardProps) => {
     }
   };
 
+  const handleImageError = (event: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    event.currentTarget.src = DefaultImg;
+  };
 
   return (
     <div className="card" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <img key = {movie.name} src= {`https://image.tmdb.org/t/p/w500${movie.imageUrl}`} alt={movie.name} />
+      <img key = {movie.name} src= {`https://image.tmdb.org/t/p/w500${movie.imageUrl}`}  onError={handleImageError} alt={movie.name} />
       {isHovered && (
         <div className="overlay">
           <h3>{movie.name}</h3>
