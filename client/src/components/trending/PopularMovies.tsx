@@ -12,7 +12,7 @@ type PopularMoviesProps = {
   setMovies: React.Dispatch<React.SetStateAction<MovieType[]>>;
 };
 
-function convertData(results: any[]): MovieType[] {
+export function convertData(results: any[]): MovieType[] {
   return results.map((movie) => ({
       name: movie.title,
       imageUrl: movie.poster_path,
