@@ -17,15 +17,13 @@
 }
 
 body {
-  background: #fff;
-  background-image: var(--gradient);
-  background-size: 800%;
-  animation: bg-animation 50s infinite alternate;
+  background:  linear-gradient(45deg, #0d082e, #0c0116);
+  background-color: #0c0116;
   color: rgb(174, 129, 233);
   font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
-  font-family: "LXGW WenKai Mono TC", monospace;
+  font-family: "LXGW WenKai Mono TC", monospace, sans-serif;
 }
 
 @keyframes bg-animation {
